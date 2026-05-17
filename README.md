@@ -50,14 +50,18 @@ coco_path="../../data/coco"  # <-- Change this to your actual COCO path
 ```
 
 ### 2. Run Scripts
-To train a model (MDS-DETR-ResNet50-12e-300Q) from scratch:
-```bash
-sh ./train_mds_ <-- train a model from scratch
+To train/test a model (MDS-DETR-ResNet50-12e-300Q):
 
-sh tools/test.sh   # <-- evaluate a model (Test mode)
+```bash
+# Train a model from scratch
+sh ./train_mds_r50_300_12e.sh
+
+# Evaluate a model with checkpoint.
+sh ./eval_mds_r50_300_12e.sh 
 ```
 
 ### 🙏 [Acknowledgements]
 Our code is heavily based on the official implementations of the following works:
+
 * Deformable-DETR (https://github.com/fundamentalvision/Deformable-DETR)
 * MS-DETR (https://github.com/Atten4Vis/MS-DETR)
